@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" >
+<channel>
+
+	<atom:link href="http://podcast.xml" rel="self" type="application/rss+xml" />
+	<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+	<title>Title</title>
+	<description>Description</description>
+	<link>http://link.com/channel/</link>
+	<language>en</language>
+	<copyright>copyright</copyright>
+	<lastBuildDate>Mon, 11 Aug 2014 21:43:42 +0200</lastBuildDate>
+	<webMaster>webMaster</webMaster>
+	<managingEditor>managingEditor</managingEditor>
+	<ttl>720</ttl>
+	<image>
+		<link>imageLink</link>
+		<title>imageTitle</title>
+		<url>imageURL</url>
+	</image>
+	<itunes:author>itunesAuthor</itunes:author>
+	<itunes:subtitle>itunesSubtitle</itunes:subtitle>
+	<itunes:summary>itunesSummary</itunes:summary>
+	<itunes:owner>
+		<itunes:name>itunesOwnerName</itunes:name>
+		<itunes:email>itunesOwnerEmail</itunes:email>
+	</itunes:owner>
+	<itunes:category>itunesCategory</itunes:category>
+	<itunes:explicit>No</itunes:explicit>
+
+<item>
+	<title>Furst Contact</title>
+	<description>descr</description>
+	<link>http://fur-friction.com/episodes/FUR%20FRICTION%20001%20Fox%20Fairplay%20-%20Furst%20Contact.mp3</link>
+	<enclosure url="http://fur-friction.com/episodes/FUR%20FRICTION%20001%20Fox%20Fairplay%20-%20Furst%20Contact.mp3" length="87895261" type="audio/mpeg" />
+	<guid>http://fur-friction.com/episodes/FUR%20FRICTION%20001%20Fox%20Fairplay%20-%20Furst%20Contact.mp3</guid>
+	<itunes:author>Fox Fairplay</itunes:author>
+	<itunes:duration>0:36:36</itunes:duration>
+	<itunes:subtitle>sub</itunes:subtitle>
+	<itunes:summary>sum</itunes:summary>
+	<itunes:explicit>No</itunes:explicit>
+	<category>Music</category>
+	<pubDate>Mon, 11 Aug 2014 21:43:44 +0200</pubDate>
+	<itunes:keywords>FUR FRICTION, Fox Fairplay</itunes:keywords>
+</item>
+<item>
+	<title>Chasing Mouse</title>
+	<description>descr</description>
+	<link>http://fur-friction.com/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3</link>
+	<enclosure url="http://fur-friction.com/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3" length="142737082" type="audio/mpeg" />
+	<guid>http://fur-friction.com/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3</guid>
+	<itunes:author>Kauna</itunes:author>
+	<itunes:duration>0:59:27</itunes:duration>
+	<itunes:subtitle>sub</itunes:subtitle>
+	<itunes:summary>sum</itunes:summary>
+	<itunes:explicit>No</itunes:explicit>
+	<category>Music</category>
+	<pubDate>Mon, 11 Aug 2014 21:43:46 +0200</pubDate>
+	<itunes:keywords>FUR FRICTION, Fox Fairplay</itunes:keywords>
+</item>
+
+</channel>
+</rss>
