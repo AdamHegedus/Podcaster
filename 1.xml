@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0">
+    <channel>
+        <title>Title</title>
+        <link>http://link.com/channel/</link>
+        <language>en</language>
+        <description>Description</description>
+        <image>
+            <url>imageURL</url>
+            <title>imageTitle</title>
+            <link>imageLink</link>
+        </image>
+        <copyright>copyright</copyright>
+        <item>
+            <title>Furst Contact</title>
+            <link>http://fur-friction.com/episodes/FUR%20FRICTION%20001%20Fox%20Fairplay%20-%20Furst%20Contact.mp3</link>
+            <description>descr</description>
+            <enclosure url="http://fur-friction.com/episodes/FUR%20FRICTION%20001%20Fox%20Fairplay%20-%20Furst%20Contact.mp3" length="87895261" type="audio/mpeg"/>
+            <guid>http://fur-friction.com/episodes/FUR%20FRICTION%20001%20Fox%20Fairplay%20-%20Furst%20Contact.mp3</guid>
+            <pubDate>Mon, 11 Aug 2014 21:43:44 +0200</pubDate>
+        </item>
+        <item>
+            <title>Chasing Mouse</title>
+            <link>http://fur-friction.com/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3</link>
+            <description>descr</description>
+            <enclosure url="http://fur-friction.com/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3" length="142737082" type="audio/mpeg"/>
+            <guid>http://fur-friction.com/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3</guid>
+            <pubDate>Mon, 11 Aug 2014 21:43:46 +0200</pubDate>
+        </item>
+    </channel>
+</rss>
