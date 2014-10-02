@@ -35,9 +35,8 @@ public class PodcastDemo {
 
 		System.out.println(rss.getVersion() + " version");
 
-		System.out.println(rss.getChannel().getLanguage());
-		System.out.println("Desc: "
-				+ rss.getChannel().getItem().get(0).getDescription());
+		System.out.println("itunes:author : "
+				+ rss.getChannel().getItunesAuthor());
 
 		for (com.limitless.audio.core.xml.ItemType act : rss.getChannel()
 				.getItem()) {
@@ -48,6 +47,5 @@ public class PodcastDemo {
 		OutputStream outputXml = new FileOutputStream("1.xml");
 
 		marshaller.marshal(rss, outputXml);
-		marshaller.marshal(rss, System.out);
 	}
 }

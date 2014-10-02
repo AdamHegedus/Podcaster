@@ -41,7 +41,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "channelType", propOrder = { "title", "link", "language",
 		"description", "pubDate", "image", "copyright", "subtitle", "summary",
-		"item" })
+		"itunesAuthor", "itunesSubtitle", "itunesSummary", "itunesCategory",
+		"itunesExplicit", "itunesOwner", "item" })
 public class ChannelType {
 
 	@XmlElement(required = true)
@@ -64,6 +65,18 @@ public class ChannelType {
 	private String summary;
 	@XmlElement(required = true)
 	private ArrayList<ItemType> item;
+	@XmlElement(required = true, name = "author", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesAuthor;
+	@XmlElement(required = true, name = "subtitle", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesSubtitle;
+	@XmlElement(required = true, name = "summary", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesSummary;
+	@XmlElement(required = true, name = "category", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesCategory;
+	@XmlElement(required = true, name = "explicit", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesExplicit;
+	@XmlElement(required = true, name = "owner", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private OwnerType itunesOwner;
 
 	/**
 	 * Gets the value of the title property.
@@ -281,6 +294,123 @@ public class ChannelType {
 			item = new ArrayList<ItemType>();
 		}
 		return this.item;
+	}
+
+	/**
+	 * Gets the value of the summary property.
+	 * 
+	 * @return itunesAuthor is {@link String }
+	 * 
+	 */
+	public String getItunesAuthor() {
+		return itunesAuthor;
+	}
+
+	/**
+	 * Sets the value of the summary property.
+	 * 
+	 * @param itunesAuthor
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setItunesAuthor(String itunesAuthor) {
+		this.itunesAuthor = itunesAuthor;
+	}
+
+	/**
+	 * Gets the value of the itunesSubtitle property.
+	 * 
+	 * @return itunesSubtitle is {@link String }
+	 */
+	public String getItunesSubtitle() {
+		return itunesSubtitle;
+	}
+
+	/**
+	 * Sets the value of the itunesSubtitle property.
+	 * 
+	 * @param itunesSubtitle
+	 *            allowed object is {@link String }
+	 */
+	public void setItunesSubtitle(String itunesSubtitle) {
+		this.itunesSubtitle = itunesSubtitle;
+	}
+
+	/**
+	 * Gets the value of the itunesSummary property.
+	 * 
+	 * @return itunesSummary is {@link String }
+	 */
+	public String getItunesSummary() {
+		return itunesSummary;
+	}
+
+	/**
+	 * 
+	 * Sets the value of the itunesSummary property.
+	 * 
+	 * @param itunesSummary
+	 *            allowed object is {@link String }
+	 */
+	public void setItunesSummary(String itunesSummary) {
+		this.itunesSummary = itunesSummary;
+	}
+
+	/**
+	 * Gets the value of the itunesCategory property.
+	 * 
+	 * @return itunesCategory is {@link String }
+	 */
+	public String getItunesCategory() {
+		return itunesCategory;
+	}
+
+	/**
+	 * Sets the value of the itunesCategory property.
+	 * 
+	 * @param itunesCategory
+	 *            allowed object is {@link String }
+	 */
+	public void setItunesCategory(String itunesCategory) {
+		this.itunesCategory = itunesCategory;
+	}
+
+	/**
+	 * Gets the value of the itunesExplicit property.
+	 * 
+	 * @return itunesExplicit is {@link String }
+	 */
+	public String getItunesExplicit() {
+		return itunesExplicit;
+	}
+
+	/**
+	 * Sets the value of the itunesExplicit property.
+	 * 
+	 * @param itunesExplicit
+	 *            allowed object is {@link String }
+	 */
+	public void setItunesExplicit(String itunesExplicit) {
+		this.itunesExplicit = itunesExplicit;
+	}
+
+	/**
+	 * Gets the value of the itunesOwner property.
+	 * 
+	 * @return itunesOwner is {@link OwnerType }
+	 */
+	public OwnerType getItunesOwner() {
+		return itunesOwner;
+	}
+
+	/**
+	 * Sets the value of the itunesOwner property.
+	 * 
+	 * @param itunesOwner
+	 *            allowed object is {@link OwnerType }
+	 */
+	public void setItunesOwner(OwnerType itunesOwner) {
+		this.itunesOwner = itunesOwner;
 	}
 
 }

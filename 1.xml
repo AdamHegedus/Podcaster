@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rss version="2.0">
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Title</title>
         <link>http://link.com/channel/</link>
@@ -11,6 +11,15 @@
             <link>imageLink</link>
         </image>
         <copyright>copyright</copyright>
+        <itunes:author>itunesAuthor</itunes:author>
+        <itunes:subtitle>itunesSubtitle</itunes:subtitle>
+        <itunes:summary>itunesSummary</itunes:summary>
+        <itunes:category>itunesCategory</itunes:category>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:owner>
+            <itunes:name>itunesOwnerName</itunes:name>
+            <itunes:email>itunesOwnerEmail</itunes:email>
+        </itunes:owner>
         <item>
             <title>Furst Contact</title>
             <link>http://fur-friction.com/episodes/FUR%20FRICTION%20001%20Fox%20Fairplay%20-%20Furst%20Contact.mp3</link>
