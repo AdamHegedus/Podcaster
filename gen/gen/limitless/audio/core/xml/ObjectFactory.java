@@ -6,12 +6,18 @@
 //
 
 
-package com.limitless.audio.core.xml;
+package gen.limitless.audio.core.xml;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+
+import com.limitless.audio.core.xml.ChannelType;
+import com.limitless.audio.core.xml.EnclosureType;
+import com.limitless.audio.core.xml.ImageType;
+import com.limitless.audio.core.xml.ItemType;
+import com.limitless.audio.core.xml.Rss;
 
 
 /**
