@@ -31,7 +31,7 @@ public class PodcastDemo {
 		Marshaller marshaller = ctx.createMarshaller();
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-		Rss rss = (Rss) unmarshaller.unmarshal(new File("2.xml"));
+		Rss rss = (Rss) unmarshaller.unmarshal(new File("1.xml"));
 
 		System.out.println(rss.getVersion() + " version");
 
@@ -44,7 +44,7 @@ public class PodcastDemo {
 
 		}
 
-		OutputStream outputXml = new FileOutputStream("1.xml");
+		OutputStream outputXml = new FileOutputStream("output.xml");
 
 		marshaller.marshal(rss, outputXml);
 	}

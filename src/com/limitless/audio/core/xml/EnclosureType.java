@@ -41,6 +41,20 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  * 
+ * iTunes supported enclosures:
+ * 
+ * <pre>
+ * File Type
+ * 
+ * MP3	audio/mpeg
+ * M4A 	audio/x-m4a 
+ * MP4 	video/mp4 
+ * M4V 	video/x-m4v 
+ * MOV 	video/quicktime 
+ * PDF 	application/pdf 
+ * EPUB 	document/x-epub
+ * </pre>
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "enclosureType")

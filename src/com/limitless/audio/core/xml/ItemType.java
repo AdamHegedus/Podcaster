@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import com.limitless.audio.core.xml.itunes.ItunesCategoryType;
+import com.limitless.audio.core.xml.itunes.ItunesImageType;
+
 /**
  * <p>
  * Java class for itemType complex type.
@@ -21,11 +24,14 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element ref="{}title"/>
  *         &lt;element ref="{}link"/>
  *         &lt;element ref="{}description"/>
- *         &lt;element ref="{}subtitle"/>
- *         &lt;element ref="{}summary"/>
- *         &lt;element name="enclosure" type="{}enclosureType"/>
  *         &lt;element ref="{}guid"/>
+ *         &lt;element name="enclosure" type="{}enclosureType"/>
  *         &lt;element ref="{}pubDate"/>
+ *         &lt;element ref="{}author"/>
+ *         
+ *         
+ *         
+ *         
  *         &lt;element ref="{}duration"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -37,9 +43,12 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "itemType", propOrder = { "title", "link", "description",
-		"subtitle", "summary", "enclosure", "guid", "pubDate", "duration" })
+		"guid", "enclosure", "pubDate", "author", "itunesAuthor",
+		"itunesSubtitle", "itunesSummary", "itunesCategory", "itunesDuration",
+		"itunesImage", "itunesExplicit" })
 public class ItemType {
 
+	// the required tags for the items
 	@XmlElement(required = true)
 	private String title;
 	@XmlElement(required = true)
@@ -47,17 +56,31 @@ public class ItemType {
 	@XmlElement(required = true)
 	private String description;
 	@XmlElement(required = true)
-	private String subtitle;
-	@XmlElement(required = true)
-	private String summary;
+	private String guid;
 	@XmlElement(required = true)
 	private EnclosureType enclosure;
 	@XmlElement(required = true)
-	private String guid;
-	@XmlElement(required = true)
 	private String pubDate;
-	@XmlElement(required = true)
-	private String duration;
+
+	// the optional tags for the items
+	@XmlElement
+	private String author;
+
+	// the iTunes specific tags for the items
+	@XmlElement(required = true, name = "author", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesAuthor;
+	@XmlElement(required = true, name = "subtitle", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesSubtitle;
+	@XmlElement(required = true, name = "summary", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesSummary;
+	@XmlElement(name = "category", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private ItunesCategoryType itunesCategory;
+	@XmlElement(name = "duration", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesDuration;
+	@XmlElement(required = true, name = "image", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private ItunesImageType itunesImage;
+	@XmlElement(required = true, name = "explicit", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesExplicit;
 
 	/**
 	 * Gets the value of the title property.
@@ -123,129 +146,168 @@ public class ItemType {
 	}
 
 	/**
-	 * Gets the value of the subtitle property.
-	 * 
-	 * @return subtitle is {@link String }
-	 * 
-	 */
-	public String getSubtitle() {
-		return subtitle;
-	}
-
-	/**
-	 * Sets the value of the subtitle property.
-	 * 
-	 * @param subtitle
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSubtitle(String subtitle) {
-		this.subtitle = subtitle;
-	}
-
-	/**
-	 * Gets the value of the summary property.
-	 * 
-	 * @return summary is {@link String }
-	 * 
-	 */
-	public String getSummary() {
-		return summary;
-	}
-
-	/**
-	 * Sets the value of the summary property.
-	 * 
-	 * @param summary
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
-
-	/**
-	 * Gets the value of the enclosure property.
-	 * 
-	 * @return enclosure is {@link EnclosureType }
-	 * 
-	 */
-	public EnclosureType getEnclosure() {
-		return enclosure;
-	}
-
-	/**
-	 * Sets the value of the enclosure property.
-	 * 
-	 * @param enclosure
-	 *            allowed object is {@link EnclosureType }
-	 * 
-	 */
-	public void setEnclosure(EnclosureType enclosure) {
-		this.enclosure = enclosure;
-	}
-
-	/**
-	 * Gets the value of the guid property.
-	 * 
-	 * @return guid is {@link String }
-	 * 
+	 * @return the guid
 	 */
 	public String getGuid() {
 		return guid;
 	}
 
 	/**
-	 * Sets the value of the guid property.
-	 * 
 	 * @param guid
-	 *            allowed object is {@link String }
-	 * 
+	 *            the guid to set
 	 */
 	public void setGuid(String guid) {
 		this.guid = guid;
 	}
 
 	/**
-	 * Gets the value of the pubDate property.
-	 * 
-	 * @return pubDate is {@link String }
-	 * 
+	 * @return the enclosure
+	 */
+	public EnclosureType getEnclosure() {
+		return enclosure;
+	}
+
+	/**
+	 * @param enclosure
+	 *            the enclosure to set
+	 */
+	public void setEnclosure(EnclosureType enclosure) {
+		this.enclosure = enclosure;
+	}
+
+	/**
+	 * @return the pubDate
 	 */
 	public String getPubDate() {
 		return pubDate;
 	}
 
 	/**
-	 * Sets the value of the pubDate property.
-	 * 
 	 * @param pubDate
-	 *            allowed object is {@link String }
-	 * 
+	 *            the pubDate to set
 	 */
 	public void setPubDate(String pubDate) {
 		this.pubDate = pubDate;
 	}
 
 	/**
-	 * Gets the value of the duration property.
-	 * 
-	 * @return duration is {@link String }
-	 * 
+	 * @return the author
 	 */
-	public String getDuration() {
-		return duration;
+	public String getAuthor() {
+		return author;
 	}
 
 	/**
-	 * Sets the value of the duration property.
-	 * 
-	 * @param duration
-	 *            allowed object is {@link String }
-	 * 
+	 * @param author
+	 *            the author to set
 	 */
-	public void setDuration(String duration) {
-		this.duration = duration;
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	/**
+	 * @return the itunesAuthor
+	 */
+	public String getItunesAuthor() {
+		return itunesAuthor;
+	}
+
+	/**
+	 * @param itunesAuthor
+	 *            the itunesAuthor to set
+	 */
+	public void setItunesAuthor(String itunesAuthor) {
+		this.itunesAuthor = itunesAuthor;
+	}
+
+	/**
+	 * @return the itunesSubtitle
+	 */
+	public String getItunesSubtitle() {
+		return itunesSubtitle;
+	}
+
+	/**
+	 * @param itunesSubtitle
+	 *            the itunesSubtitle to set
+	 */
+	public void setItunesSubtitle(String itunesSubtitle) {
+		this.itunesSubtitle = itunesSubtitle;
+	}
+
+	/**
+	 * @return the itunesSummary
+	 */
+	public String getItunesSummary() {
+		return itunesSummary;
+	}
+
+	/**
+	 * @param itunesSummary
+	 *            the itunesSummary to set
+	 */
+	public void setItunesSummary(String itunesSummary) {
+		this.itunesSummary = itunesSummary;
+	}
+
+	/**
+	 * @return the itunesCategory
+	 */
+	public ItunesCategoryType getItunesCategory() {
+		return itunesCategory;
+	}
+
+	/**
+	 * @param itunesCategory
+	 *            the itunesCategory to set
+	 */
+	public void setItunesCategory(ItunesCategoryType itunesCategory) {
+		this.itunesCategory = itunesCategory;
+	}
+
+	/**
+	 * @return the itunesDuration
+	 */
+	public String getItunesDuration() {
+		return itunesDuration;
+	}
+
+	/**
+	 * @param itunesDuration
+	 *            the itunesDuration to set
+	 */
+	public void setItunesDuration(String itunesDuration) {
+		this.itunesDuration = itunesDuration;
+	}
+
+	/**
+	 * @return the itunesImage
+	 */
+	public ItunesImageType getItunesImage() {
+		return itunesImage;
+	}
+
+	/**
+	 * @param itunesImage
+	 *            the itunesImage to set
+	 */
+	public void setItunesImage(ItunesImageType itunesImage) {
+		this.itunesImage = itunesImage;
+	}
+
+	/**
+	 * @return the itunesExplicit
+	 */
+	public String getItunesExplicit() {
+		return itunesExplicit;
+	}
+
+	/**
+	 * @param itunesExplicit
+	 *            the itunesExplicit to set
+	 */
+	public void setItunesExplicit(String itunesExplicit) {
+		this.itunesExplicit = itunesExplicit;
 	}
 
 }

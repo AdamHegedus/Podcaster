@@ -48,8 +48,7 @@ import com.limitless.audio.core.xml.itunes.ItunesOwnerType;
 		"description", "link", "language", "copyright", "managingEditor",
 		"webMaster", "pubDate", "lastBuildDate", "category", "ttl", "image",
 		"itunesAuthor", "itunesSubtitle", "itunesSummary", "itunesCategory",
-		"itunesImage", "itunesExplicit", "itunesOwner", "itunesKeywords",
-		"item" })
+		"itunesImage", "itunesExplicit", "itunesOwner", "item" })
 public class ChannelType {
 
 	// the required tags for the channel item
@@ -101,8 +100,6 @@ public class ChannelType {
 	private String itunesExplicit;
 	@XmlElement(required = true, name = "owner", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
 	private ItunesOwnerType itunesOwner;
-	@XmlElement(name = "keywords", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
-	private String itunesKeywords;
 
 	/**
 	 * Gets the value of the title property.
