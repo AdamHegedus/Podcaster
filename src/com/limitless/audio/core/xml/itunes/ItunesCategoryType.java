@@ -1,0 +1,13 @@
+package com.limitless.audio.core.xml.itunes;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "itunesCategoryType", propOrder = { "text" })
+public class ItunesCategoryType {
+	@XmlAttribute(name = "text", required = true)
+	private String text;
+}

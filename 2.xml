@@ -25,7 +25,8 @@
 		<itunes:name>itunesOwnerName</itunes:name>
 		<itunes:email>itunesOwnerEmail</itunes:email>
 	</itunes:owner>
-	<itunes:category>itunesCategory</itunes:category>
+	<itunes:category text="Music">itunesCategory</itunes:category>
+	<itunes:image href="itunesImageLink"/>
 	<itunes:explicit>No</itunes:explicit>
 
 <item>

@@ -1,4 +1,4 @@
-package com.limitless.audio.core.xml;
+package com.limitless.audio.core.xml.itunes;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlType;
  * this class.
  * 
  * <pre>
- * &lt;complexType name="ownerType">
+ * &lt;complexType name="itunesOwnerType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -30,8 +30,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ownerType", propOrder = { "name", "email" })
-public class OwnerType {
+@XmlType(name = "itunesOwnerType", propOrder = { "name", "email" })
+public class ItunesOwnerType {
 	@XmlElement(required = true, namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
 	private String name;
 	@XmlElement(required = true, namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")

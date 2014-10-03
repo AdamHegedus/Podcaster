@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
+        <atom:link href="http://podcast.xml" rel="self" type="application/rss+xml"/>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <title>Title</title>
+        <description>Description</description>
         <link>http://link.com/channel/</link>
         <language>en</language>
-        <description>Description</description>
+        <copyright>copyright</copyright>
+        <managingEditor>managingEditor</managingEditor>
+        <webMaster>webMaster</webMaster>
+        <lastBuildDate>Mon, 11 Aug 2014 21:43:42 +0200</lastBuildDate>
+        <ttl>720</ttl>
         <image>
             <url>imageURL</url>
             <title>imageTitle</title>
             <link>imageLink</link>
         </image>
-        <copyright>copyright</copyright>
         <itunes:author>itunesAuthor</itunes:author>
         <itunes:subtitle>itunesSubtitle</itunes:subtitle>
         <itunes:summary>itunesSummary</itunes:summary>
-        <itunes:category>itunesCategory</itunes:category>
+        <itunes:category text="Music"/>
+        <itunes:image href="itunesImageLink"/>
         <itunes:explicit>No</itunes:explicit>
         <itunes:owner>
             <itunes:name>itunesOwnerName</itunes:name>

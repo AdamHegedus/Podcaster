@@ -7,6 +7,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import com.limitless.audio.core.xml.atom.AtomLinkType;
+import com.limitless.audio.core.xml.itunes.ItunesCategoryType;
+import com.limitless.audio.core.xml.itunes.ItunesImageType;
+import com.limitless.audio.core.xml.itunes.ItunesOwnerType;
+
 /**
  * <p>
  * Java class for channelType complex type.
@@ -39,32 +44,49 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "channelType", propOrder = { "title", "link", "language",
-		"description", "pubDate", "image", "copyright", "subtitle", "summary",
+@XmlType(name = "channelType", propOrder = { "atomLink", "docs", "title",
+		"description", "link", "language", "copyright", "managingEditor",
+		"webMaster", "pubDate", "lastBuildDate", "category", "ttl", "image",
 		"itunesAuthor", "itunesSubtitle", "itunesSummary", "itunesCategory",
-		"itunesExplicit", "itunesOwner", "item" })
+		"itunesImage", "itunesExplicit", "itunesOwner", "itunesKeywords",
+		"item" })
 public class ChannelType {
 
+	// the required tags for the channel item
+	@XmlElement(required = true, name = "link", namespace = "http://www.w3.org/2005/Atom")
+	private AtomLinkType atomLink;
 	@XmlElement(required = true)
 	private String title;
 	@XmlElement(required = true)
-	private String link;
-	@XmlElement(required = true)
-	private String language;
-	@XmlElement(required = true)
 	private String description;
 	@XmlElement(required = true)
-	private String pubDate;
-	@XmlElement(required = true)
-	private ImageType image;
-	@XmlElement(required = true)
-	private String copyright;
-	@XmlElement(required = true)
-	private String subtitle;
-	@XmlElement(required = true)
-	private String summary;
+	private String link;
 	@XmlElement(required = true)
 	private ArrayList<ItemType> item;
+
+	// the optional tags for the channel item
+	@XmlElement
+	private String language;
+	@XmlElement
+	private String copyright;
+	@XmlElement
+	private String managingEditor;
+	@XmlElement
+	private String webMaster;
+	@XmlElement
+	private String pubDate;
+	@XmlElement
+	private String lastBuildDate;
+	@XmlElement
+	private String category;
+	@XmlElement
+	private String docs;
+	@XmlElement
+	private int ttl;
+	@XmlElement
+	private ImageType image;
+
+	// the iTunes specific tags for the channel item
 	@XmlElement(required = true, name = "author", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
 	private String itunesAuthor;
 	@XmlElement(required = true, name = "subtitle", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
@@ -72,11 +94,36 @@ public class ChannelType {
 	@XmlElement(required = true, name = "summary", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
 	private String itunesSummary;
 	@XmlElement(required = true, name = "category", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
-	private String itunesCategory;
+	private ItunesCategoryType itunesCategory;
+	@XmlElement(required = true, name = "image", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private ItunesImageType itunesImage;
 	@XmlElement(required = true, name = "explicit", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
 	private String itunesExplicit;
 	@XmlElement(required = true, name = "owner", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
-	private OwnerType itunesOwner;
+	private ItunesOwnerType itunesOwner;
+	@XmlElement(name = "keywords", namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")
+	private String itunesKeywords;
+
+	/**
+	 * Gets the value of the title property.
+	 * 
+	 * @return atomLink is {@link AtomLinkType }
+	 * 
+	 */
+	public AtomLinkType getAtomLink() {
+		return atomLink;
+	}
+
+	/**
+	 * Sets the value of the title property.
+	 * 
+	 * @param atomLink
+	 *            allowed object is {@link AtomLinkType }
+	 * 
+	 */
+	public void setAtomLink(AtomLinkType atomLink) {
+		this.atomLink = atomLink;
+	}
 
 	/**
 	 * Gets the value of the title property.
@@ -226,48 +273,6 @@ public class ChannelType {
 	}
 
 	/**
-	 * Gets the value of the subtitle property.
-	 * 
-	 * @return subtitle is {@link String }
-	 * 
-	 */
-	public String getSubtitle() {
-		return subtitle;
-	}
-
-	/**
-	 * Sets the value of the subtitle property.
-	 * 
-	 * @param subtitle
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSubtitle(String subtitle) {
-		this.subtitle = subtitle;
-	}
-
-	/**
-	 * Gets the value of the summary property.
-	 * 
-	 * @return summary is {@link String }
-	 * 
-	 */
-	public String getSummary() {
-		return summary;
-	}
-
-	/**
-	 * Sets the value of the summary property.
-	 * 
-	 * @param summary
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
-
-	/**
 	 * Gets the value of the item property.
 	 * 
 	 * <p>
@@ -357,25 +362,6 @@ public class ChannelType {
 	}
 
 	/**
-	 * Gets the value of the itunesCategory property.
-	 * 
-	 * @return itunesCategory is {@link String }
-	 */
-	public String getItunesCategory() {
-		return itunesCategory;
-	}
-
-	/**
-	 * Sets the value of the itunesCategory property.
-	 * 
-	 * @param itunesCategory
-	 *            allowed object is {@link String }
-	 */
-	public void setItunesCategory(String itunesCategory) {
-		this.itunesCategory = itunesCategory;
-	}
-
-	/**
 	 * Gets the value of the itunesExplicit property.
 	 * 
 	 * @return itunesExplicit is {@link String }
@@ -397,9 +383,9 @@ public class ChannelType {
 	/**
 	 * Gets the value of the itunesOwner property.
 	 * 
-	 * @return itunesOwner is {@link OwnerType }
+	 * @return itunesOwner is {@link ItunesOwnerType }
 	 */
-	public OwnerType getItunesOwner() {
+	public ItunesOwnerType getItunesOwner() {
 		return itunesOwner;
 	}
 
@@ -407,9 +393,9 @@ public class ChannelType {
 	 * Sets the value of the itunesOwner property.
 	 * 
 	 * @param itunesOwner
-	 *            allowed object is {@link OwnerType }
+	 *            allowed object is {@link ItunesOwnerType }
 	 */
-	public void setItunesOwner(OwnerType itunesOwner) {
+	public void setItunesOwner(ItunesOwnerType itunesOwner) {
 		this.itunesOwner = itunesOwner;
 	}
 
