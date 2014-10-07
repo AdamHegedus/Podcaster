@@ -66,15 +66,4 @@ public class Rss {
 	public void setChannel(ChannelType channel) {
 		this.channel = channel;
 	}
-
-	/**
-	 * Gets the value of the RSS version property.
-	 * 
-	 * @return version is {@link String }
-	 * 
-	 */
-	public String getVersion() {
-		return version;
-	}
-
 }

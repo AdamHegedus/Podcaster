@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<?xml-stylesheet type="text/xsl" href="feed.xsl"?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <atom:link href="http://podcast.xml" rel="self" type="application/rss+xml"/>
@@ -10,7 +9,7 @@
         <language>en</language>
         <copyright>© 2014 Fur Friction</copyright>
         <managingEditor>fox.fairplay@gmail.com (Fox Fairplay)</managingEditor>
-        <webMaster>fur.friction@gmail.com  (Adam Hegedus)</webMaster>
+        <webMaster>furfriction@gmail.com  (Adam Hegedus)</webMaster>
         <pubDate>Tue, 30 Sep 2014 20:00:00 +0200</pubDate>
         <lastBuildDate>Tue, 30 Sep 2014 20:00:00 +0200</lastBuildDate>
         <category>Music</category>
@@ -48,14 +47,14 @@
         <item>
             <title>Chasing Mouse</title>
             <link>http://fur-friction.com/podcast/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3</link>
-            <description>Kauna is a Hungarian producer who has several tracks released on the label Limitless Audio, which he also featured in this mix too. Some unreleased materials, collaborations and remixes with Addamz are also included into this package. Fresh and Warm mixture of his current favorites.</description>
+            <description>Kauna is a Hungarian producer who has several tracks released on the label Limitless Audio, which he also featured in this mix too. Some unreleased materials, collaborations and remixes with Addamz are also included in this package. Fresh and Warm mixture of his current favorites.</description>
             <guid>http://fur-friction.com/podcast/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3</guid>
             <enclosure url="http://fur-friction.com/podcast/episodes/FUR%20FRICTION%20002%20Kauna%20-%20Chasing%20Mouse.mp3" length="142737082" type="audio/mpeg"/>
             <pubDate>Sun, 29 Jun 2014 20:00:00 +0200</pubDate>
             <author>Kauna</author>
             <itunes:author>Kauna</itunes:author>
             <itunes:subtitle>FUR FRICTION 002</itunes:subtitle>
-            <itunes:summary>Kauna is a Hungarian producer who has several tracks released on the label Limitless Audio, which he also featured in this mix too. Some unreleased materials, collaborations and remixes with Addamz are also included into this package. Fresh and Warm mixture of his current favorites.</itunes:summary>
+            <itunes:summary>Kauna is a Hungarian producer who has several tracks released on the label Limitless Audio, which he also featured in this mix too. Some unreleased materials, collaborations and remixes with Addamz are also included in this package. Fresh and Warm mixture of his current favorites.</itunes:summary>
             <itunes:duration>0:59:27</itunes:duration>
             <itunes:image href="http://fur-friction.com/podcast/episodes/FUR%20FRICTION%20002.jpg"/>
             <itunes:explicit>No</itunes:explicit>

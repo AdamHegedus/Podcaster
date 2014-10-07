@@ -25,15 +25,26 @@ import com.limitless.audio.core.xml.itunes.ItunesOwnerType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element ref="{}docs"/>
  *         &lt;element ref="{}title"/>
+ *         &lt;element ref="{}description"/>
  *         &lt;element ref="{}link"/>
  *         &lt;element ref="{}language"/>
- *         &lt;element ref="{}description"/>
- *         &lt;element ref="{}pubDate"/>
- *         &lt;element name="image" type="{}imageType"/>
  *         &lt;element ref="{}copyright"/>
- *         &lt;element ref="{}subtitle"/>
- *         &lt;element ref="{}summary"/>
+ *         &lt;element ref="{}managingEditor"/>
+ *         &lt;element ref="{}webMaster"/>
+ *         &lt;element ref="{}pubDate"/>
+ *         &lt;element ref="{}lastBuildDate"/>
+ *         &lt;element ref="{}category"/>
+ *         &lt;element ref="{}ttl"/>
+ *         &lt;element name="image" type="{}imageType"/>
+ *         &lt;element ref="{}itunes:author"/>
+ *         &lt;element ref="{}itunes:subtitle"/>
+ *         &lt;element ref="{}itunes:summary"/>
+ *         &lt;element name="itunes:category" type="{}itunesCategoryType"/>
+ *         &lt;element name="itunes:image" type="{}itunesImageType"/>
+ *         &lt;element ref="{}itunes:explicit"/>
+ *         &lt;element name="itunes:owner" type="{}itunesOwnerype"/>
  *         &lt;element name="item" type="{}itemType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -394,6 +405,117 @@ public class ChannelType {
 	 */
 	public void setItunesOwner(ItunesOwnerType itunesOwner) {
 		this.itunesOwner = itunesOwner;
+	}
+
+	/**
+	 * @return the managingEditor
+	 */
+	public String getManagingEditor() {
+		return managingEditor;
+	}
+
+	/**
+	 * @param managingEditor
+	 *            the managingEditor to set
+	 */
+	public void setManagingEditor(String managingEditor) {
+		this.managingEditor = managingEditor;
+	}
+
+	/**
+	 * @return the webMaster
+	 */
+	public String getWebMaster() {
+		return webMaster;
+	}
+
+	/**
+	 * @param webMaster
+	 *            the webMaster to set
+	 */
+	public void setWebMaster(String webMaster) {
+		this.webMaster = webMaster;
+	}
+
+	/**
+	 * @return the lastBuildDate
+	 */
+	public String getLastBuildDate() {
+		return lastBuildDate;
+	}
+
+	/**
+	 * @param lastBuildDate
+	 *            the lastBuildDate to set
+	 */
+	public void setLastBuildDate(String lastBuildDate) {
+		this.lastBuildDate = lastBuildDate;
+	}
+
+	/**
+	 * @return the category
+	 */
+	public String getCategory() {
+		return category;
+	}
+
+	/**
+	 * @param category
+	 *            the category to set
+	 */
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @return the ttl
+	 */
+	public int getTtl() {
+		return ttl;
+	}
+
+	/**
+	 * @param ttl
+	 *            the ttl to set
+	 */
+	public void setTtl(int ttl) {
+		this.ttl = ttl;
+	}
+
+	/**
+	 * Gets the value of the itunesCategory property.
+	 * 
+	 * @return the itunesCategory
+	 */
+	public ItunesCategoryType getItunesCategory() {
+		return itunesCategory;
+	}
+
+	/**
+	 * @param itunesCategory
+	 *            the itunesCategory to set
+	 */
+	public void setItunesCategory(ItunesCategoryType itunesCategory) {
+		this.itunesCategory = itunesCategory;
+	}
+
+	/**
+	 * Gets the value of the itunesImage property.
+	 * 
+	 * @return the itunesImage
+	 */
+	public ItunesImageType getItunesImage() {
+		return itunesImage;
+	}
+
+	/**
+	 * @param itunesImage
+	 *            allowed object is {@link ItunesImageType }
+	 */
+	public void setItunesImage(ItunesImageType itunesImage) {
+		this.itunesImage = itunesImage;
 	}
 
 }

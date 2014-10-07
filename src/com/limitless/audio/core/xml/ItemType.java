@@ -28,11 +28,12 @@ import com.limitless.audio.core.xml.itunes.ItunesImageType;
  *         &lt;element name="enclosure" type="{}enclosureType"/>
  *         &lt;element ref="{}pubDate"/>
  *         &lt;element ref="{}author"/>
- *         
- *         
- *         
- *         
- *         &lt;element ref="{}duration"/>
+ *         &lt;element ref="{}itunes:author"/>
+ *         &lt;element ref="{}itunes:subtitle"/>
+ *         &lt;element ref="{}itunes:summary"/>
+ *         &lt;element ref="{}itunes:duration"/>
+ *         &lt;element name="itunes:image" type="{}itunesImageType"/>
+ *         &lt;element ref="{}itunes:author"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

@@ -15,7 +15,6 @@ import com.limitless.audio.core.xml.Rss;
 public class PodcastDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		try {
 			reading();
 		} catch (JAXBException e) {
@@ -33,8 +32,13 @@ public class PodcastDemo {
 
 		Rss rss = (Rss) unmarshaller.unmarshal(new File("1.xml"));
 
-		System.out.println(rss.getVersion() + " version");
+		System.out.println("\n\t RSS Channel Data: \n");
+		System.out.println("Title: \t" + rss.getChannel().getTitle());
+		System.out.println("Description: \t"
+				+ rss.getChannel().getDescription());
+		System.out.println("Link: \t" + rss.getChannel().getLink());
 
+		System.out.println("\n");
 		System.out.println("itunes:author : "
 				+ rss.getChannel().getItunesAuthor());
 
